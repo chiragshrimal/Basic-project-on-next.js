@@ -11,7 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # clone the reposatary from github to github vertual machine ubuntu
       - name: Checkout the code
         uses: actions/checkout@v2
 
-      
+        # using ssh can go into the machine EC2 
+        # so we need some information like password , host name , port 
+      - name: Execute remote SSH commands using password
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 3.109.158.24
+          username: ubuntu
+          password: ${{ secrets.PRIVETE_SSH_KEY }}
+          port: 22
+          script: whoami
