@@ -1,6 +1,4 @@
-// src/app/page.tsx
-
-import { CSSProperties } from 'react';
+// pages/index.js
 
 export default function BirthdayPage() {
   return (
@@ -16,13 +14,7 @@ export default function BirthdayPage() {
   );
 }
 
-const styles: {
-  container: CSSProperties;
-  heading: CSSProperties;
-  message: CSSProperties;
-  cake: CSSProperties;
-  footer: CSSProperties;
-} = {
+const styles = {
   container: {
     minHeight: '100vh',
     backgroundColor: '#1e1e2f',
@@ -47,7 +39,6 @@ const styles: {
   cake: {
     fontSize: '5rem',
     margin: '2rem 0',
-    // Note: This won't animate unless you add CSS animation rules
     animation: 'bounce 1s infinite',
   },
   footer: {
@@ -56,3 +47,6 @@ const styles: {
     color: '#aaa',
   },
 };
+
+// Add this in pages/_app.js or styles/globals.css if you want bounce animation
+// or ignore it for a static version
