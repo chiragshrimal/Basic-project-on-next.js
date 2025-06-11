@@ -2,4 +2,4 @@ cd Basic-project-on-next.js
 git pull origin main
 npm install
 npm run build
-npm run start
+pm2 start npm --name "next-app" -- run start
