@@ -24,4 +24,4 @@ jobs:
           username: ubuntu
           key: ${{ secrets.PRIVETE_SSH_KEY }}
           port: 22
-          script: ./deploy.sh
+          script: whoami
