@@ -14,8 +14,7 @@ jobs:
     # clone the reposatary from github to github vertual machine ubuntu
       - name: Checkout the code
         uses: actions/checkout@v2
-
-      - name: Deploy on VM 
+        
       - name: Deploy to the VM
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" &> ~/ssh_key
